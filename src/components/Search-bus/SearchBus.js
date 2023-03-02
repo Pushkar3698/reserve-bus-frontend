@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import background from "../../resources/background.webp";
+import background from "../../resources/background.jpg";
 import { Button } from "../ui/button/Button";
 import SearchOutput from "./SearchOutput";
 import SearchTime from "./SearchTime";
