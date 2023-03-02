@@ -42,7 +42,7 @@ const BusCard = ({
       busId: busId,
     };
 
-    const fetchdata = await fetch("http://localhost:8001/getSeats", {
+    const fetchdata = await fetch("https://reservebus.onrender.com/getSeats", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

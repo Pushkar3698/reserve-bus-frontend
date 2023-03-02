@@ -39,13 +39,16 @@ const InfoPage = () => {
       routeId: busInformation[0]._id,
     };
 
-    const fetchdata = await fetch("http://localhost:8001/bookTicket", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const fetchdata = await fetch(
+      "https://reservebus.onrender.com/bookTicket",
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const res = await fetchdata.json();
     console.log(res);

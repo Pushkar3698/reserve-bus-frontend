@@ -22,7 +22,7 @@ export const SearchBus = () => {
   const dispatch = useDispatch();
 
   const getRoutes = async () => {
-    const fetchdata = await fetch("http://localhost:8001/getRoutes");
+    const fetchdata = await fetch("https://reservebus.onrender.com/getRoutes");
     const res = await fetchdata.json();
     setroutes(res);
   };
@@ -66,13 +66,16 @@ export const SearchBus = () => {
   };
 
   const searchBusHandler = async () => {
-    const fetchdata = await fetch("http://localhost:8001/getDetails", {
-      method: "POST",
-      body: JSON.stringify(details),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const fetchdata = await fetch(
+      "https://reservebus.onrender.com/getDetails",
+      {
+        method: "POST",
+        body: JSON.stringify(details),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const res = await fetchdata.json();
 

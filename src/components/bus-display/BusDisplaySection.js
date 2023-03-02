@@ -15,9 +15,12 @@ export const BusDisplaySection = () => {
   const route = routeId.split("&")[0].split("=")[1];
 
   const getRoutesFromId = async (id) => {
-    const fetchdata = await fetch(`http://localhost:8001/bus-display/${id}`, {
-      method: "GET",
-    });
+    const fetchdata = await fetch(
+      `https://reservebus.onrender.com/bus-display/${id}`,
+      {
+        method: "GET",
+      }
+    );
 
     const res = await fetchdata.json();
 
